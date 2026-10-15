@@ -11,3 +11,4 @@ My topic will be on different types of rice based on the users Zodiac sign, for 
 ## AI Use
 
 The AI use and policy is that it is acceptable to use but must be declared and stated within the README.md section and only between check-ins
+10/15/2026: Utilized VSC built-in AI to clean up Main.js for easier viewing

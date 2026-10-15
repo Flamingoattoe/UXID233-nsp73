@@ -97,12 +97,24 @@ const zodiacSign = [
     }
 ];
 
+for (const sign_name of zodiacSign) {
+    const signElement = document.createElement("div");
+    signElement.classList.add("sign");
+    signElement.innerHTML = `
+        <h2>${sign_name.name}</h2>
+        <p>${sign_name.date}</p>
+        <img src="${sign_name.image}" alt="${sign_name.name}">
+        <p>${sign_name.text}</p>
+    `;
+    document.body.appendChild(signElement);
+}
+
 const RiceType = [
     {
         id: 0,
         name: "Long Grain Rice",
         date: "Mar. 21 - Apr. 19",
-        image: "images/long_grain_rice.jpg",
+        image: "images/long grain rice.jpg",
         sound: "",
         text: "Long grain rice has a lower starch content than short grain rice, which gives it a fluffier texture when cooked. It is often used in pilafs and other dishes where a lighter, more separate grain is desired."
     },
@@ -110,7 +122,7 @@ const RiceType = [
         id: 1,
         name: "Medium Grain Rice",
         date: "Apr. 20 - May 20",
-        image: "images/medium_grain_rice.jpg",
+        image: "images/medium grain rice.jpg",
         sound: "",
         text: "Medium grain rice has a moderate starch content, which gives it a balanced texture when cooked. It is often used in a variety of dishes and is a good all-around choice."
     },
@@ -118,7 +130,7 @@ const RiceType = [
         id: 2,
         name: "Sushi Rice",
         date: "May 21 - Jun. 20",
-        image: "images/sushi_rice.jpg",
+        image: "images/sushi rice.jpg",
         sound: "",
         text: "Sushi rice, also known as shari or sumeshi, is a short-grain rice used in Japanese cuisine. It is typically seasoned with a mixture of vinegar, sugar, and salt, giving it a slightly sweet and tangy flavor. Sushi rice is sticky and holds together well, making it ideal for forming sushi rolls and nigiri. It is an essential component of sushi dishes and is often paired with fresh fish, vegetables, and other ingredients to create a variety of sushi options."
     },
@@ -126,64 +138,84 @@ const RiceType = [
         id: 3,
         name: "Basmati Rice",
         date: "Jun. 21 - Jul. 22",
-        image: "images/basmati_rice.jpg",
+        image: "images/basmati rice.jpg",
         sound: "",
         text: "Basmati rice is a long-grain rice variety commonly used in Indian and Pakistani cuisine. It has a distinctive aroma and a light, fluffy texture when cooked. Basmati rice is known for its ability to remain separate and not clump together, making it ideal for biryanis, pilafs, and other aromatic dishes."
     },
     {
         id: 4,
         name: "Brown Rice",
-        date: "Aug. 23 - Sep. 22",
-        image: "images/brown_rice.jpg",
+        date: "Jul. 23 - Aug. 22",
+        image: "images/brown rice.jpg",
         sound: "",
         text: "Brown rice is a whole grain rice that has been milled to remove the bran and germ, but still retains the endosperm. It has a nuttier flavor and chewier texture than white rice, and is higher in fiber, vitamins, and minerals."
     },
     {
         id: 5,
         name: "Arborio Rice",
-        date: "Sep. 23 - Oct. 22",
-        image: "images/arborio_rice.jpg",
+        date: "Aug. 23 - Sep. 22",
+        image: "images/arborio rice.jpg",
         sound: "",
         text: "Arborio rice is a short-grain rice variety commonly used in Italian cuisine. It has a high starch content, which gives it a creamy texture when cooked. Arborio rice is often used in risotto dishes, where it absorbs liquid and creates a rich, velvety consistency."
     },
     {
         id: 6,
         name: "Wild Rice",
-        date: "Oct. 23 - Nov. 21",
-        image: "images/wild_rice.jpg",
+        date: "Sep. 23 - Oct. 22",
+        image: "images/wild rice.jpg",
         sound: "",
         text: "Wild rice is a type of grass seed that is native to North America. It has a distinctive nutty flavor and a chewy texture when cooked. Wild rice is often used in pilafs, salads, and as a side dish, and is known for its high protein and fiber content."
     },
     {
         id: 7,
         name: "Black Rice",
-        date: "Nov. 22 - Dec. 21",
-        image: "images/black_rice.jpg",
+        date: "Oct. 23 - Nov. 21",
+        image: "images/black rice.jpg",
         sound: "",
         text: "Black rice is a variety of rice that has a dark purple color when cooked. It has a nuttier flavor and a chewier texture than white rice, and is higher in antioxidants and fiber."
     },
     {
         id: 8,
         name: "Red Rice",
-        date: "Dec. 22 - Jan. 19",
-        image: "images/red_rice.jpg",
+        date: "Nov. 22 - Dec. 21",
+        image: "images/red rice.jpg",
         sound: "",
         text: "Red rice is a variety of rice that has a reddish color when cooked. It has a distinct, earthy flavor and a chewy texture when cooked. Red rice is often used in pilafs and as a side dish, and is known for its high protein and fiber content."
     },
     {
         id: 9,
         name: "Sticky Rice",
-        date: "Jan. 20 - Feb. 18",
-        image: "images/sticky_rice.jpg",
+        date: "Dec. 22 - Jan. 19",
+        image: "images/sticky rice.jpg",
         sound: "",
         text: "Sticky rice is a variety of rice that has a high starch content, which gives it a sticky texture when cooked. It is commonly used in Southeast Asian cuisine, particularly in dishes like Thai sticky rice and Vietnamese bánh chưng."
     },
     {
         id: 10,
         name: "Short Grain Rice",
-        date: "Feb. 19 - Mar. 20",
-        image: "images/short_grain_rice.jpg",
+        date: "Jan. 20 - Feb. 18",
+        image: "images/short grain rice.jpg",
         sound: "",
         text: "Short grain rice has a higher starch content than long grain rice, which gives it a softer texture when cooked. It is often used in risotto and other creamy dishes."
-    }
+    },
+    {
+        id: 11,
+        name: "Jasmine Rice",
+        date: "Feb. 19 - Mar. 20",
+        image: "images/jasmine rice.jpg",
+        sound: "",
+        text: "Jasmine rice is a long-grain rice variety that is popular in Thai and Vietnamese cuisine. It has a fragrant aroma and a light, fluffy texture when cooked."
+    },
 ];
+
+for (const sign_name of RiceType) {
+    const signElement = document.createElement("div");
+    signElement.classList.add("sign");
+    signElement.innerHTML = `
+        <h2>${sign_name.name}</h2>
+        <p>${sign_name.date}</p>
+        <img src="${sign_name.image}" alt="${sign_name.name}">
+        <p>${sign_name.text}</p>
+    `;
+    document.body.appendChild(signElement);
+}
