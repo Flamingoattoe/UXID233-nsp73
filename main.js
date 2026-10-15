@@ -25,6 +25,58 @@ console.log(zodiacSign[8].name + " " + zodiacSign[8].date);
 console.log(zodiacSign[9].name + " " + zodiacSign[9].date);
 console.log(zodiacSign[10].name + " " + zodiacSign[10].date);
 console.log(zodiacSign[11].name + " " + zodiacSign[11].date);
+
+const zodiacSign = {
+    capricorn:
+        { image("https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Capricorn.svg/1200px-Capricorn.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Capricorn is the tenth astrological sign in the zodiac, originating from the constellation of Capricornus, the horned goat. It spans the 270–300th degree of the zodiac, corresponding to celestial longitude. Under the tropical zodiac, the Sun transits this area on average between December 22 and January 19 each year.")
+     },
+    aquarius: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Aquarius.svg/1200px-Aquarius.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Aquarius is the eleventh astrological sign in the zodiac, originating from the constellation of Aquarius. It spans the 300–330th degree of the zodiac, corresponding to celestial longitude. Under the tropical zodiac, the Sun transits this area on average between January 20 and February 18 each year.")
+     },
+    pisces: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pisces.svg/1200px-Pisces.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Pisces is the twelfth astrological sign in the zodiac, originating from the constellation of Pisces. It spans the 330–360th degree of the zodiac, corresponding to celestial longitude. Under the tropical zodiac, the Sun transits this area on average between February 19 and March 20 each year.")
+     },
+    aries: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Aries.svg/1200px-Aries.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Aries is the first astrological sign in the zodiac, originating from the constellation of Aries. It spans the 0–30th degree of the zodiac, corresponding to celestial longitude. Under the tropical zodiac, the Sun transits this area on average between March 21 and April 19 each year.")
+     },
+    taurus: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Taurus.svg/1200px-Taurus.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Taurus is the second astrological sign in the zodiac, originating from the constellation of Taurus. It spans the 30–60th degree of the zodiac, corresponding to celestial longitude. Under the tropical zodiac, the Sun transits this area on average between April 20 and May 20 each year.")
+     },
+    gemini: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Gemini.svg/1200px-Gemini.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Gemini is the third astrological sign in the zodiac, originating from the constellation of Gemini. It spans the 60–90th degree of the zodiac, corresponding to celestial longitude. Under the tropical zodiac, the Sun transits this area on average between May 21 and June 20 each year.")
+     },
+    cancer: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Cancer.svg/1200px-Cancer.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Cancer is the fourth astrological sign in the zodiac, originating from the constellation of Cancer. It spans the 90–120th degree of the zodiac, corresponding to celestial longitude. Under the tropical zodiac, the Sun transits this area on average between June 21 and July 22 each year.")
+     },
+    leo: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Leo.svg/1200px-Leo.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Leo is the fifth astrological sign inthe zodiac, originating fromthe constellation of Leo. It spansthe 120–150th degree ofthe zodiac, correspondingto celestial longitude. Underthe tropical zodiac,thesun transits this areaon average between July 23and August 22 each year.")
+     },
+    virgo: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Virgo.svg/1200px-Virgo.svg.png")
+        sound("https://www.soundjay.com/button/beep-07.wav")
+        text("Virgo isthe sixth astrological sign inthe zodic, originatingfromthe constellation of Virgo. It spansthe 15０–１８０th degreeofthe zodic, correspondingto celestial longitude. Underthe tropical zodic,the sun transits this areaon average between August２３and September２２each year.")
+     },
+    libra: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Libra.svg/12００px-Libra.svg.png")
+        sound("https://www.soundjay.com/button/beep-０７.wav")
+        text("Libra isthe seventh astrological sign inthe zodic, originatingfromthe constellation of Libra. It spansthe１８０–２１０th degreeofthe zodic, correspondingto celestial longitude. Underthe tropical	zodic,the sun transits this areaon average between September２３and October２２each year.")
+     },
+    scorpio: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/２/２e/Scorpio.svg/１２００px-Scorpio.svg.png")
+        sound("https://www.soundjay.com/button/beep-０７.wav")
+        text("Scorpio isthe eighth astrological sign inthe	zodic, originatingfromthe constellation of Scorpio. It spans	the２１０–２４０th degreeof	the	zodic, correspondingto celestial longitude. Under	the	tropical	zodic,the sun transits this areaon average between October２３and November２１each year.")
+     },
+    sagittarius: { image("https://upload.wikimedia.org/wikipedia/commons/thumb/４/４a/Sagittarius.svg/１２００px-Sagittarius.svg.png")
+        sound("https://www.soundjay.com/button/beep-０７.wav")
+        text("Sagittarius isthe ninth astrological sign in	the	zodic, originatingfrom	the	constellation of Sagittarius. It spans	the	２４０–	２７０th degreeof	the	zodic, correspondingto celestial longitude. Under	the	tropical	zodic,the sun transits this areaon average between November	２２and December	２１each year.")
+     }
+}
 const RiceType = [
     {id: 0, name: "Sushi Rice", date: "May 21 - Jun. 20"},
     {id: 1, name: "Basmati Rice", date: "Jun. 21 - Jul. 22"},
@@ -52,3 +104,4 @@ console.log(RiceType[8].name + " " + RiceType[8].date);
 console.log(RiceType[9].name + " " + RiceType[9].date);
 console.log(RiceType[10].name + " " + RiceType[10].date);
 console.log(RiceType[11].name + " " + RiceType[11].date);
+
