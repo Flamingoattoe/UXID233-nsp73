@@ -1,11 +1,31 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>My page</title>
-	</head>
-	<body>
-		<h1>What type of rice are you?</h1>
-		<script src="main.js"></script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Type of Rice Are You?</title>
+</head>
+
+<body>
+    <main>
+        <h1>What type of rice are you?</h1>
+        <p>Enter your date of birth to discover your zodiac sign and rice type.</p>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB">
+
+        <button id="showSign">Show My Rice</button>
+        <section id="output" aria-live="polite"></section>
+        <div id="signDisplay">
+
+            <h2 id="sign"></h2>
+            <p id="date"></p>
+            <img id="signImage" src="" alt="">
+            <h3 id="name"></h3>
+            <img id="image" src="" alt="">
+            <p id="description"></p>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
 </html>

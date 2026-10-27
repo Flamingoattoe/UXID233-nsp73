@@ -173,32 +173,84 @@ function findZodiacSign(month, day) {
     for (let i = 0; i < ZodiacSign.length; i++) {
 
         const sign = ZodiacSign[i];
-        if (sign.startMonth < sign.endMonth) {
 
-            if (
-                (month === sign.startMonth && day >= sign.startDay) ||
-                (month === sign.endMonth && day <= sign.endDay) ||
-                (month > sign.startMonth && month < sign.endMonth)
-            ) {
-                return sign;
-            }
-        }
-        else {
+        const isStart =
+            month === sign.startMonth && day >= sign.startDay;
 
-            if (
-                (month === sign.startMonth && day >= sign.startDay) ||
-                (month === sign.endMonth && day <= sign.endDay) ||
-                month > sign.startMonth ||
-                month < sign.endMonth
-            ) {
-                return sign;
-            }
+        const isEnd =
+            month === sign.endMonth && day <= sign.endDay;
+
+        const isMiddle =
+            sign.startMonth < sign.endMonth
+                ? month > sign.startMonth && month < sign.endMonth
+                : month > sign.startMonth || month < sign.endMonth;
+
+        if (isStart || isEnd || isMiddle) {
+            return sign;
         }
     }
 
     return null;
 }
-const result = findZodiacSign(6, 15);
 
-console.log("ZodiacSign:", result.sign);
-console.log("RiceType:", result.name);
+
+const output = document.querySelector("#output");
+const signDisplay = document.querySelector("#signDisplay");
+
+const signName = document.querySelector("#sign");
+const signDate = document.querySelector("#date");
+const signImage = document.querySelector("#signImage");
+
+const riceName = document.querySelector("#name");
+const riceImage = document.querySelector("#image");
+
+const description = document.querySelector("#description");
+
+
+signDisplay.hidden = true;
+
+
+function displaySign(sign) {
+
+    output.textContent = `Your zodiac sign is ${sign.sign}.`;
+
+    signName.textContent = sign.sign;
+
+    signDate.textContent = sign.date;
+
+    signImage.src = sign.signImage;
+    signImage.alt = `${sign.sign} zodiac symbol`;
+
+    riceName.textContent = sign.name;
+
+    riceImage.src = sign.image;
+    riceImage.alt = `${sign.name}`;
+
+    description.textContent = sign.text;
+     signDisplay.hidden = false;
+}
+
+document.querySelector("#showSign").addEventListener("click", function () {
+
+    const birthDate = document.querySelector("#DOB").value;
+
+    if (birthDate === "") {
+        output.textContent = "Please enter your date of birth.";
+        signDisplay.hidden = true;
+        return;
+    }
+
+    const date = new Date(birthDate);
+
+    const month = date.getUTCMonth() + 1;
+    const day = date.getUTCDate();
+
+    const result = findZodiacSign(month, day);
+
+    if (result) {
+        displaySign(result);
+
+        console.log("Zodiac Sign:", result.sign);
+        console.log("Rice Type:", result.name);
+    }
+});
