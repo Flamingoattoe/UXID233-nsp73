@@ -1,8 +1,7 @@
-const ZodiacSign = [
+const RiceSign = [
     {
         id: 0,
         name: "Long Grain Rice",
-        /*Aries*/
         date: "Mar. 21 - Apr. 19",
         startMonth: 3,
         startDay: 21,
@@ -14,7 +13,6 @@ const ZodiacSign = [
     {
         id: 1,
         name: "Medium Grain Rice",
-        /*Taurus*/
         date: "Apr. 20 - May 20",
         startMonth: 4,
         startDay: 20,
@@ -26,7 +24,6 @@ const ZodiacSign = [
     {
         id: 2,
         name: "Sushi Rice",
-        /*Gemini*/
         date: "May 21 - Jun. 20",
         startMonth: 5,
         startDay: 21,
@@ -38,7 +35,6 @@ const ZodiacSign = [
     {
         id: 3,
         name: "Basmati Rice",
-        /*Cancer*/
         date: "Jun. 21 - Jul. 22",
         startMonth: 6,
         startDay: 21,
@@ -50,7 +46,6 @@ const ZodiacSign = [
     {
         id: 4,
         name: "Brown Rice",
-        /*Leo*/
         date: "Jul. 23 - Aug. 22",
         startMonth: 7,
         startDay: 23,
@@ -62,7 +57,6 @@ const ZodiacSign = [
     {
         id: 5,
         name: "Arborio Rice",
-        /*Virgo*/
         date: "Aug. 23 - Sep. 22",
         startMonth: 8,
         startDay: 23,
@@ -74,7 +68,6 @@ const ZodiacSign = [
     {
         id: 6,
         name: "Wild Rice",
-        /*Libra*/
         date: "Sep. 23 - Oct. 22",
         startMonth: 9,
         startDay: 23,
@@ -86,7 +79,6 @@ const ZodiacSign = [
     {
         id: 7,
         name: "Black Rice",
-        /*Scorpio*/
         date: "Oct. 23 - Nov. 21",
         startMonth: 10,
         startDay: 23,
@@ -98,7 +90,6 @@ const ZodiacSign = [
     {
         id: 8,
         name: "Red Rice",
-        /*Sagittarius*/
         date: "Nov. 22 - Dec. 21",
         startMonth: 11,
         startDay: 22,
@@ -110,7 +101,6 @@ const ZodiacSign = [
     {
         id: 9,
         name: "Sticky Rice",
-        /*Capricorn*/
         date: "Dec. 22 - Jan. 19",
         startMonth: 12,
         startDay: 22,
@@ -122,7 +112,6 @@ const ZodiacSign = [
     {
         id: 10,
         name: "Short Grain Rice",
-        /*Aquarius*/
         date: "Jan. 20 - Feb. 18",
         startMonth: 1,
         startDay: 20,
@@ -134,7 +123,6 @@ const ZodiacSign = [
     {
         id: 11,
         name: "Jasmine Rice",
-        /*Pisces*/
         date: "Feb. 19 - Mar. 20",
         startMonth: 2,
         startDay: 19,
@@ -144,11 +132,11 @@ const ZodiacSign = [
         text: "Jasmine rice is a long-grain rice variety that is popular in Thai and Vietnamese cuisine. It has a fragrant aroma and a light, fluffy texture when cooked."
     },
 ];
-function findZodiacSign(month, day) {
+function findRiceSign(month, day) {
 
-    for (let i = 0; i < ZodiacSign.length; i++) {
+    for (let i = 0; i < RiceSign.length; i++) {
 
-        const sign = ZodiacSign[i];
+        const sign = RiceSign[i];
 
         const isStart =
             month === sign.startMonth && day >= sign.startDay;
@@ -170,19 +158,22 @@ function findZodiacSign(month, day) {
 }
 function displaySign(sign) {
     output.textContent = sign.name;
-    description.textContent = sign.text;
 }
 
-document.querySelector("#showSign") /*AI: How to trigger a function when a button ID is pressed*/ .addEventListener("click", function () {
-
+//https://www.youtube.com/watch?v=DABVLJjnVUs//
+const button = document.querySelector("#ShowSign")
+button.addEventListener("click", () => {
+    
+    //https://www.youtube.com/watch?v=M3VEFVBRw-o//
     const birthDate = document.querySelector("#DOB").value;
     const date = new Date(birthDate);
     const month = date.getMonth();
     const day = date.getDate ();
-    const result = findZodiacSign(month, day);
+    const result = findRiceSign(month, day);
 
     if (result) {
         displaySign(result);
         console.log("Rice Type:", result.name);
+        console.log("Rice Image", result.image);
     }
 });
