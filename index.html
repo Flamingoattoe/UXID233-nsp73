@@ -4,21 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>What Type of Rice Are You?</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <main>
         <h1>What type of rice are you?</h1>
-        <p>Enter your date of birth to discover your rice type based on Zodiac Sign.</p>
+        <p>Enter or select your date of birth to discover your rice type based on Zodiac Sign.</p>
 
         <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date-->
         <label for="DOB">Date of Birth:</label>
         <input type="date" id="DOB">
 
         <button id="ShowSign">Show My Rice</button>
+
         <section id="output"></section>
+
         <h2 id="name"></h2>
+        <p id="date"></p>
+        <p id="text"></p>
+
+        <img id="image" src="" alt="">
     </main>
     <script src="main.js"></script>
+
 </body>
 </html>

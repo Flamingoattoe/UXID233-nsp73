@@ -8,6 +8,7 @@ const RiceSign = [
         endMonth: 4,
         endDay: 19,
         image: "images/long grain rice.jpg",
+        sound: "sounds/long_grain_rice.mp3",
         text: "Long grain rice has a lower starch content than short grain rice, which gives it a fluffier texture when cooked. It is often used in pilafs and other dishes where a lighter, more separate grain is desired."
     },
     {
@@ -19,6 +20,7 @@ const RiceSign = [
         endMonth: 5,
         endDay: 20,
         image: "images/medium grain rice.jpg",
+        sound: "sounds/medium_grain_rice.mp3",
         text: "Medium grain rice has a moderate starch content, which gives it a balanced texture when cooked. It is often used in a variety of dishes and is a good all-around choice."
     },
     {
@@ -30,6 +32,7 @@ const RiceSign = [
         endMonth: 6,
         endDay: 20,
         image: "images/sushi rice.jpg",
+        sound: "sounds/sushi_rice.mp3",
         text: "Sushi rice, also known as shari or sumeshi, is a short-grain rice used in Japanese cuisine. It is typically seasoned with a mixture of vinegar, sugar, and salt, giving it a slightly sweet and tangy flavor. Sushi rice is sticky and holds together well, making it ideal for forming sushi rolls and nigiri. It is an essential component of sushi dishes and is often paired with fresh fish, vegetables, and other ingredients to create a variety of sushi options."
     },
     {
@@ -41,6 +44,7 @@ const RiceSign = [
         endMonth: 7,
         endDay: 22,
         image: "images/basmati rice.jpg",
+        sound: "sounds/basmati_rice.mp3",
         text: "Basmati rice is a long-grain rice variety commonly used in Indian and Pakistani cuisine. It has a distinctive aroma and a light, fluffy texture when cooked. Basmati rice is known for its ability to remain separate and not clump together, making it ideal for biryanis, pilafs, and other aromatic dishes."
     },
     {
@@ -52,6 +56,7 @@ const RiceSign = [
         endMonth: 8,
         endDay: 22,
         image: "images/brown rice.jpg",
+        sound: "sounds/brown_rice.mp3",
         text: "Brown rice is a whole grain rice that has been milled to remove the bran and germ, but still retains the endosperm. It has a nuttier flavor and chewier texture than white rice, and is higher in fiber, vitamins, and minerals."
     },
     {
@@ -63,6 +68,7 @@ const RiceSign = [
         endMonth: 9,
         endDay: 22,
         image: "images/arborio rice.jpg",
+        sound: "sounds/arborio_rice.mp3",
         text: "Arborio rice is a short-grain rice variety commonly used in Italian cuisine. It has a high starch content, which gives it a creamy texture when cooked. Arborio rice is often used in risotto dishes, where it absorbs liquid and creates a rich, velvety consistency."
     },
     {
@@ -74,6 +80,7 @@ const RiceSign = [
         endMonth: 10,
         endDay: 22,
         image: "images/wild rice.jpg",
+        sound: "sounds/wild_rice.mp3",
         text: "Wild rice is a type of grass seed that is native to North America. It has a distinctive nutty flavor and a chewy texture when cooked. Wild rice is often used in pilafs, salads, and as a side dish, and is known for its high protein and fiber content."
     },
     {
@@ -85,6 +92,7 @@ const RiceSign = [
         endMonth: 11,
         endDay: 21,
         image: "images/black rice.jpg",
+        sound: "sounds/black_rice.mp3",
         text: "Black rice is a variety of rice that has a dark purple color when cooked. It has a nuttier flavor and a chewier texture than white rice, and is higher in antioxidants and fiber."
     },
     {
@@ -96,6 +104,7 @@ const RiceSign = [
         endMonth: 12,
         endDay: 21,
         image: "images/red rice.jpg",
+        sound: "sounds/red_rice.mp3",
         text: "Red rice is a variety of rice that has a reddish color when cooked. It has a distinct, earthy flavor and a chewy texture when cooked. Red rice is often used in pilafs and as a side dish, and is known for its high protein and fiber content."
     },
     {
@@ -107,6 +116,7 @@ const RiceSign = [
         endMonth: 1,
         endDay: 19,
         image: "images/sticky rice.jpg",
+        sound: "sounds/sticky_rice.mp3",
         text: "Sticky rice is a variety of rice that has a high starch content, which gives it a sticky texture when cooked. It is commonly used in Southeast Asian cuisine, particularly in dishes like Thai sticky rice and Vietnamese bánh chưng."
     },
     {
@@ -118,6 +128,7 @@ const RiceSign = [
         endMonth: 2,
         endDay: 18,
         image: "images/short grain rice.jpg",
+        sound: "sounds/short_grain_rice.mp3",
         text: "Short grain rice has a higher starch content than long grain rice, which gives it a softer texture when cooked. It is often used in risotto and other creamy dishes."
     },
     {
@@ -129,9 +140,19 @@ const RiceSign = [
         endMonth: 3,
         endDay: 20,
         image: "images/jasmine rice.jpg",
+        sound: "sounds/jasmine_rice.mp3",
         text: "Jasmine rice is a long-grain rice variety that is popular in Thai and Vietnamese cuisine. It has a fragrant aroma and a light, fluffy texture when cooked."
     },
 ];
+
+const output = document.querySelector("#output");
+const riceName = document.querySelector("#name");
+const riceDate = document.querySelector("#date");
+const riceImage = document.querySelector("#image");
+const riceSound = document.querySelector("#sound");
+const riceText = document.querySelector("#text");
+
+
 function findRiceSign(month, day) {
 
     for (let i = 0; i < RiceSign.length; i++) {
@@ -153,27 +174,38 @@ function findRiceSign(month, day) {
             return sign;
         }
     }
-
+    
     return null;
 }
+
+
 function displaySign(sign) {
-    output.textContent = sign.name;
+
+    riceName.textContent = sign.name;
+    riceDate.textContent = sign.date;
+    riceText.textContent = sign.text;
+    riceImage.src = sign.image;
+    riceImage.alt = sign.name;
+    riceSound.src = sign.sound;
 }
 
 //https://www.youtube.com/watch?v=DABVLJjnVUs//
-const button = document.querySelector("#ShowSign")
-button.addEventListener("click", () => {
-    
-    //https://www.youtube.com/watch?v=M3VEFVBRw-o//
+const button = document.querySelector("#ShowSign");
+button.addEventListener("click", (event) => {
+    event.preventDefault();
+
     const birthDate = document.querySelector("#DOB").value;
-    const date = new Date(birthDate);
-    const month = date.getMonth();
-    const day = date.getDate ();
+
+    /* Takes the birthdate and splits it into year, month, and day. Then converts them into readable numbers. */
+    const [year, month, day] = birthDate.split("-").map(Number);
     const result = findRiceSign(month, day);
+    
 
     if (result) {
         displaySign(result);
         console.log("Rice Type:", result.name);
-        console.log("Rice Image", result.image);
-    }
+        console.log("Rice Image:", result.image);
+        console.log("Rice Sound:", result.sound);
+        console.log("Rice Text:", result.text);
+    } 
 });
