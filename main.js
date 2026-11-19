@@ -25,87 +25,87 @@ const RiceSign = [
     },
     {
         id: 2,
-        name: "Sushi Rice",
+        name: "Basmati Rice",
         date: "May 21 - Jun. 20",
         startMonth: 5,
         startDay: 21,
         endMonth: 6,
         endDay: 20,
-        image: "images/sushi rice.jpg",
-        sound: "sounds/sushi_rice.mp3",
-        text: "Sushi rice, also known as shari or sumeshi, is a short-grain rice used in Japanese cuisine. It is typically seasoned with a mixture of vinegar, sugar, and salt, giving it a slightly sweet and tangy flavor. Sushi rice is sticky and holds together well, making it ideal for forming sushi rolls and nigiri. It is an essential component of sushi dishes and is often paired with fresh fish, vegetables, and other ingredients to create a variety of sushi options."
-    },
-    {
-        id: 3,
-        name: "Basmati Rice",
-        date: "Jun. 21 - Jul. 22",
-        startMonth: 6,
-        startDay: 21,
-        endMonth: 7,
-        endDay: 22,
         image: "images/basmati rice.jpg",
         sound: "sounds/basmati_rice.mp3",
         text: "Basmati rice is a long-grain rice variety commonly used in Indian and Pakistani cuisine. It has a distinctive aroma and a light, fluffy texture when cooked. Basmati rice is known for its ability to remain separate and not clump together, making it ideal for biryanis, pilafs, and other aromatic dishes."
     },
     {
+        id: 3,
+        name: "Sushi Rice",
+        date: "Jun. 21 - Jul. 22",
+        startMonth: 6,
+        startDay: 21,
+        endMonth: 7,
+        endDay: 22,
+        image: "images/sushi rice.jpg",
+        sound: "sounds/sushi_rice.mp3",
+        text: "Sushi rice, also known as shari or sumeshi, is a short-grain rice used in Japanese cuisine. It is typically seasoned with a mixture of vinegar, sugar, and salt, giving it a slightly sweet and tangy flavor. Sushi rice is sticky and holds together well, making it ideal for forming sushi rolls and nigiri. It is an essential component of sushi dishes and is often paired with fresh fish, vegetables, and other ingredients to create a variety of sushi options."
+    },
+    {
         id: 4,
-        name: "Brown Rice",
+        name: "Wild Rice",
         date: "Jul. 23 - Aug. 22",
         startMonth: 7,
         startDay: 23,
         endMonth: 8,
-        endDay: 22,
-        image: "images/brown rice.jpg",
-        sound: "sounds/brown_rice.mp3",
-        text: "Brown rice is a whole grain rice that has been milled to remove the bran and germ, but still retains the endosperm. It has a nuttier flavor and chewier texture than white rice, and is higher in fiber, vitamins, and minerals."
-    },
-    {
-        id: 5,
-        name: "Arborio Rice",
-        date: "Aug. 23 - Sep. 22",
-        startMonth: 8,
-        startDay: 23,
-        endMonth: 9,
-        endDay: 22,
-        image: "images/arborio rice.jpg",
-        sound: "sounds/arborio_rice.mp3",
-        text: "Arborio rice is a short-grain rice variety commonly used in Italian cuisine. It has a high starch content, which gives it a creamy texture when cooked. Arborio rice is often used in risotto dishes, where it absorbs liquid and creates a rich, velvety consistency."
-    },
-    {
-        id: 6,
-        name: "Wild Rice",
-        date: "Sep. 23 - Oct. 22",
-        startMonth: 9,
-        startDay: 23,
-        endMonth: 10,
         endDay: 22,
         image: "images/wild rice.jpg",
         sound: "sounds/wild_rice.mp3",
         text: "Wild rice is a type of grass seed that is native to North America. It has a distinctive nutty flavor and a chewy texture when cooked. Wild rice is often used in pilafs, salads, and as a side dish, and is known for its high protein and fiber content."
     },
     {
+        id: 5,
+        name: "Mochi Rice",
+        date: "Aug. 23 - Sep. 22",
+        startMonth: 8,
+        startDay: 23,
+        endMonth: 9,
+        endDay: 22,
+        image: "images/mochi rice.jpg",
+        sound: "sounds/mochi_rice.mp3",
+        text: "Mochi rice is a short-grain rice variety commonly used in Japanese cuisine. It has a high starch content, which gives it a sticky texture when cooked. Mochi rice is often used in the preparation of mochi, a traditional Japanese dessert."
+    },
+    {
+        id: 6,
+        name: "Brown Rice",
+        date: "Sep. 23 - Oct. 22",
+        startMonth: 9,
+        startDay: 23,
+        endMonth: 10,
+        endDay: 22,
+        image: "images/brown rice.jpg",
+        sound: "sounds/brown_rice.mp3",
+        text: "Brown rice is a whole grain rice that has been milled to remove the bran and germ, but still retains the endosperm. It has a nuttier flavor and chewier texture than white rice, and is higher in fiber, vitamins, and minerals."
+    },
+    {
         id: 7,
-        name: "Black Rice",
+        name: "Red Rice",
         date: "Oct. 23 - Nov. 21",
         startMonth: 10,
         startDay: 23,
         endMonth: 11,
         endDay: 21,
-        image: "images/black rice.jpg",
-        sound: "sounds/black_rice.mp3",
-        text: "Black rice is a variety of rice that has a dark purple color when cooked. It has a nuttier flavor and a chewier texture than white rice, and is higher in antioxidants and fiber."
+        image: "images/red rice.jpg",
+        sound: "sounds/red_rice.mp3",
+        text: "Red rice is a variety of rice that has a reddish color when cooked. It has a distinct, earthy flavor and a chewy texture when cooked. Red rice is often used in pilafs and as a side dish, and is known for its high protein and fiber content."
     },
     {
         id: 8,
-        name: "Red Rice",
+        name: "Black Rice",
         date: "Nov. 22 - Dec. 21",
         startMonth: 11,
         startDay: 22,
         endMonth: 12,
         endDay: 21,
-        image: "images/red rice.jpg",
-        sound: "sounds/red_rice.mp3",
-        text: "Red rice is a variety of rice that has a reddish color when cooked. It has a distinct, earthy flavor and a chewy texture when cooked. Red rice is often used in pilafs and as a side dish, and is known for its high protein and fiber content."
+        image: "images/black rice.jpg",
+        sound: "sounds/black_rice.mp3",
+        text: "Black rice is a variety of rice that has a dark purple color when cooked. It has a nuttier flavor and a chewier texture than white rice, and is higher in antioxidants and fiber."
     },
     {
         id: 9,
@@ -145,61 +145,76 @@ const RiceSign = [
     },
 ];
 
+const riceAudio = new Audio();
+
+function stop_all_sounds() {
+    riceAudio.pause();
+    riceAudio.currentTime = 0;
+}
+
+function playRiceSound(soundPath) {
+    stop_all_sounds();
+    riceAudio.src = soundPath;
+    riceAudio.load();
+    riceAudio.play().then(() => {
+}
+)}
+
 const output = document.querySelector("#output");
 const riceName = document.querySelector("#name");
 const riceDate = document.querySelector("#date");
 const riceImage = document.querySelector("#image");
-const riceSound = document.querySelector("#sound");
+const riceAudioElement = document.querySelector("#sound");
 const riceText = document.querySelector("#text");
-
 
 function findRiceSign(month, day) {
 
     for (let i = 0; i < RiceSign.length; i++) {
-
         const sign = RiceSign[i];
-
         const isStart =
             month === sign.startMonth && day >= sign.startDay;
-
         const isEnd =
             month === sign.endMonth && day <= sign.endDay;
-
         const isMiddle =
             sign.startMonth < sign.endMonth
                 ? month > sign.startMonth && month < sign.endMonth
                 : month > sign.startMonth || month < sign.endMonth;
-
         if (isStart || isEnd || isMiddle) {
             return sign;
         }
     }
-    
     return null;
 }
 
-
 function displaySign(sign) {
-
     riceName.textContent = sign.name;
     riceDate.textContent = sign.date;
     riceText.textContent = sign.text;
     riceImage.src = sign.image;
     riceImage.alt = sign.name;
-    riceSound.src = sign.sound;
+    playRiceSound(sign.sound);
 }
 
 //https://www.youtube.com/watch?v=DABVLJjnVUs//
+
 const button = document.querySelector("#ShowSign");
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        button.click();
+    }
+});
+
 button.addEventListener("click", (event) => {
     event.preventDefault();
-
     const birthDate = document.querySelector("#DOB").value;
 
-    /* Takes the birthdate and splits it into year, month, and day. Then converts them into readable numbers. */
+    if (!birthDate) {
+        alert("Please enter your birthday!");
+        return;
+    }
     const [year, month, day] = birthDate.split("-").map(Number);
     const result = findRiceSign(month, day);
-    
 
     if (result) {
         displaySign(result);
@@ -207,5 +222,5 @@ button.addEventListener("click", (event) => {
         console.log("Rice Image:", result.image);
         console.log("Rice Sound:", result.sound);
         console.log("Rice Text:", result.text);
-    } 
+    }
 });
