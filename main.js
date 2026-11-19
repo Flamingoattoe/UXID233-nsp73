@@ -146,6 +146,7 @@ const RiceSign = [
 ];
 
 const riceAudio = new Audio();
+const enterSound = new Audio("sounds/star_enter.mp3");
 
 function stop_all_sounds() {
     riceAudio.pause();
@@ -196,16 +197,19 @@ function displaySign(sign) {
 }
 
 //https://www.youtube.com/watch?v=DABVLJjnVUs//
-
 const button = document.querySelector("#ShowSign");
 document.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
+        enterSound.currentTime = 0;
+        enterSound.play();
         event.preventDefault();
         button.click();
     }
 });
 
 button.addEventListener("click", (event) => {
+    enterSound.currentTime = 0;
+    enterSound.play();
     event.preventDefault();
     const birthDate = document.querySelector("#DOB").value;
 
